@@ -1,13 +1,20 @@
 import React from "react";
-import "./Title.css"
+import styled from 'styled-components'
+
+const TitleNav = styled.header`
+  background-color: lightblue;
+  height: 10vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 3%;
+`
 
 function Title(){
-
-
   return (
-    <header className="title-nav">
+    <TitleNav>
       <h1>NASA Photo of The Day</h1>
-    </header>
+    </TitleNav>
   )
 }
 
