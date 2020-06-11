@@ -1,9 +1,14 @@
 import React, { useState, useEffect } from "react";
-import "./App.css";
-import axios from 'axios'
-import { API_KEY, API_URL } from './api'
-import Title from './components/Title/Title'
-import Details from './components/Details/Details'
+import axios from 'axios';
+import { API_KEY, API_URL } from './resources/api';
+import Title from './components/Title';
+import Details from './components/Details';
+import styled from 'styled-components';
+
+
+const AppDiv = styled.div`
+  text-align: center;
+`
 
 function App() {
   const [data, setData] = useState([])
@@ -19,14 +24,10 @@ function App() {
   }, [])
 
   return (
-    <div className="App">
+    <AppDiv>
       <Title />
       <Details nasaData={data} />
-      {/* <p>
-        Read through the instructions in the README.md file to build your NASA
-        app! Have fun <span role="img" aria-label='go!'>🚀</span>!
-      </p> */}
-    </div>
+    </AppDiv>
   );
 }
 

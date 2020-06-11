@@ -1,6 +1,6 @@
 import React from "react";
 import styled from 'styled-components'
-import Photo from "../Photo/Photo";
+import Photo from "./Photo";
 
 
 const DetailsContainer = styled.div`
